@@ -23,13 +23,13 @@ public class NhapXuatHoTen {
 		banPhim = new Scanner(System.in);
 		// Lấy Chuỗi
 		//In ra đường dẫn cho User biết
-		System.out.print("Họ tên?");
+		System.out.print("Họ tên?" );
 		hoTen = banPhim.nextLine();
-		System.out.print("Bao Nhiêu tuổi?");
+		System.out.print("Bao Nhiêu tuổi?" );
 		tuoi= banPhim.nextInt();
-		System.out.print("Cao bao nhiêu?");
+		System.out.print("Cao bao nhiêu?" );
 		chieuCao= banPhim.nextDouble();
-		System.out.print("cân nặng?");
+		System.out.print("cân nặng?" );
 		canNang= banPhim.nextDouble();
 		
 		//Xuất thông tin
