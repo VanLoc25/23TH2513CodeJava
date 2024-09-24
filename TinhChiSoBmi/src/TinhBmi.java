@@ -36,7 +36,7 @@ public class TinhBmi {
         double bmi = canNang / (chieuCao * chieuCao);
         
         // Xuất kết quả BMI
-        System.out.printf("Chỉ số BMI của bạn là: ", + bmi);
+        System.out.printf("Chỉ số BMI của bạn là: %.2f%n", + bmi);
         
        
         
@@ -44,11 +44,14 @@ public class TinhBmi {
 
 if (bmi < 18.5) {
             System.out.println("Thiếu cân.");
-        } else if (bmi >= 18.5 && bmi < 24.9) {
+        } 
+	else if (bmi >= 18.5 && bmi < 24.9) {
             System.out.println("Cân nặng bình thường.");
-        } else if (bmi >= 25 && bmi < 29.9) {
+        } 
+	else if (bmi >= 25 && bmi < 29.9) {
             System.out.println("Thừa cân.");
-        } else {
+        } 
+	else {
             System.out.println("Bị béo phì.");
         }
 	}
