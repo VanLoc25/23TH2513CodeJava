@@ -15,27 +15,30 @@ public class TinhBmi {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// Khai báo biến cho cân nặng và chiều cao
-        double canNang, chieuCao, bmi;
+        
         
         // Tạo đối tượng Scanner để nhập dữ liệu từ bàn phím
-        Scanner scanner = new Scanner(System.in);
+        Scanner banPhim = new Scanner(System.in);
+        
+        // Nhập tên
+        System.out.print("Nhập tên: ");
+        String hoTen = banPhim.nextLine();
         
         // Nhập cân nặng
         System.out.print("Nhập cân nặng của bạn (kg): ");
-        canNang = scanner.nextDouble();
+        double canNang = banPhim.nextDouble();
         
         // Nhập chiều cao
         System.out.print("Nhập chiều cao của bạn (m): ");
-        chieuCao = scanner.nextDouble();
+        double chieuCao = banPhim.nextDouble();
         
         // Tính chỉ số BMI
-        bmi = canNang / (chieuCao * chieuCao);
+        double bmi = canNang / (chieuCao * chieuCao);
         
         // Xuất kết quả BMI
-        System.out.printf("Chỉ số BMI của bạn là: %.2f%n", bmi);
+        System.out.printf("Chỉ số BMI của bạn là: ", + bmi);
         
-        // Đóng Scanner sau khi sử dụng
-        scanner.close();
+       
         
         // Đánh giá theo chỉ số BMI
 
