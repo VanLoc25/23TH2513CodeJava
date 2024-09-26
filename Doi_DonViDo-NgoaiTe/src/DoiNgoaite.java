@@ -12,36 +12,31 @@ public class DoiNgoaite {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-Scanner scanner = new Scanner(System.in);
-        
-        // Tỷ giá giả định (tính đến thời điểm hiện tại)
-        double usdToVnd = 24000.0;
-        double eurToVnd = 26000.0;
+		 @SuppressWarnings("resource")
+		Scanner banPhim = new Scanner(System.in);  
 
-        // Nhập số tiền cần quy đổi
-        System.out.println("Nhập số tiền cần đổi(Vnđ):");
-        double amount = scanner.nextDouble();
+	        System.out.println("Chương trình đổi ngoại tệ");  
+	        System.out.println("1. USD sang VND");  
+	        System.out.println("2. VND sang USD");  
+	        System.out.print("Chọn loại chuyển đổi (1 hoặc 2): ");  
+	        int choice = banPhim.nextInt();  
+	        
+	        double USDToVND = 23000; // Tỉ giá USD sang VND  
+	        double VNDToUSD = 1 / USDToVND; // Tỉ giá VND sang USD  
+	        
+	        System.out.print("Nhập số tiền cần đổi: ");  
+	        double Tien = banPhim.nextDouble();  
+	        double chuyenDoi;  
 
-        // Chọn loại ngoại tệ
-        System.out.println("Chọn loại ngoại tệ cần quy đổi:");
-        System.out.println("1. USD (Đô la Mỹ)");
-        System.out.println("2. EUR (Euro)");
-        
-        int choice = scanner.nextInt();
-        double convertedAmount = 0.0;
-
-        switch (choice) {
-            case 1:
-                convertedAmount = amount * usdToVnd;
-                System.out.println(amount + " USD tương đương " + convertedAmount + " VND.");
-                break;
-            case 2:
-                convertedAmount = amount * eurToVnd;
-                System.out.println(amount + " EUR tương đương " + convertedAmount + " VND.");
-                break;
-            default:
-                System.out.println("Lựa chọn không hợp lệ.");
-        }
+	        if (choice == 1) {  
+	        	chuyenDoi = Tien * USDToVND;  
+	            System.out.printf("Số tiền sau khi đổi:"+ chuyenDoi + " VND");  
+	        } else if (choice == 2) {  
+	        	chuyenDoi = Tien * VNDToUSD;  
+	            System.out.printf("Số tiền sau khi đổi:"+ chuyenDoi +"USD");  
+	        } else {  
+	            System.out.println("Lựa chọn không hợp lệ! Vui lòng chọn lại.");  
+	        }  
 
 	}
 
