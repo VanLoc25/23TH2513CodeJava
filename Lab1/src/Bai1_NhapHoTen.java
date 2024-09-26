@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * 
  */
-public class Bai1 {
+public class Bai1_NhapHoTen {
 
 	/**
 	 * @param args
