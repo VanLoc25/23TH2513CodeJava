@@ -6,47 +6,43 @@ import java.util.Scanner;
  * 
  */
 public class DoiNgoaite {
-	// Tỷ giá chuyển đổi (có thể thay đổi)  
-    private static final double USD_TO_EUR_RATE = 0.85; // 1 USD = 0.85 EUR  
-    private static final double EUR_TO_USD_RATE = 1.18; // 1 EUR = 1.18 USD  
 
-    public static double convertUsdToEur(double amount) {  
-        return amount * USD_TO_EUR_RATE;  
-    }  
-
-    public static double convertEurToUsd(double amount) {  
-        return amount * EUR_TO_USD_RATE;  
-    }  
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+Scanner scanner = new Scanner(System.in);
+        
+        // Tỷ giá giả định (tính đến thời điểm hiện tại)
+        double usdToVnd = 24000.0;
+        double eurToVnd = 26000.0;
 
+        // Nhập số tiền cần quy đổi
+        System.out.println("Nhập số tiền cần đổi(Vnđ):");
+        double amount = scanner.nextDouble();
 
+        // Chọn loại ngoại tệ
+        System.out.println("Chọn loại ngoại tệ cần quy đổi:");
+        System.out.println("1. USD (Đô la Mỹ)");
+        System.out.println("2. EUR (Euro)");
+        
+        int choice = scanner.nextInt();
+        double convertedAmount = 0.0;
 
-Scanner banPhim = new Scanner(System.in);  
+        switch (choice) {
+            case 1:
+                convertedAmount = amount * usdToVnd;
+                System.out.println(amount + " USD tương đương " + convertedAmount + " VND.");
+                break;
+            case 2:
+                convertedAmount = amount * eurToVnd;
+                System.out.println(amount + " EUR tương đương " + convertedAmount + " VND.");
+                break;
+            default:
+                System.out.println("Lựa chọn không hợp lệ.");
+        }
 
-	        System.out.println("Chương trình đổi ngoại tệ.");  
-	        System.out.println("1. Đổi USD sang EUR");  
-	        System.out.println("2. Đổi EUR sang USD");  
-	        System.out.print("Chọn loại chuyển đổi (1 hoặc 2): ");  
-	        int choice = banPhim.nextInt();  
-
-	        switch (choice) {  
-	            case 1:  
-	                System.out.print("Nhập số tiền USD: ");  
-	                double usd = banPhim.nextDouble();  
-	                double eur = convertUsdToEur(usd);  
-	                System.out.println(usd + " USD = " + eur + " EUR");  
-	                break;  
-	            case 2:  
-	                System.out.print("Nhập số tiền EUR: ");  
-	                double euro = banPhim.nextDouble();  
-	                double dollar = convertEurToUsd(euro);  
-	                System.out.println(euro + " EUR = " + dollar + " USD");  
-	                break;  
-	            default:  
-	                System.out.println("Lựa chọn không hợp lệ.");  
-	                break;  
-	        }  
 	}
 
 }
