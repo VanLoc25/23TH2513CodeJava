@@ -6,7 +6,7 @@ import java.util.Scanner;
  * 
  */
 public class Bai4 {
-
+//Tính Phương trình bậc 2
 	/**
 	 * @param args
 	 */

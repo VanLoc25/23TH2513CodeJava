@@ -6,7 +6,7 @@
 import java.util.Scanner;
 
 public class Bai3 {
-
+//Tính thể tích khối chữ nhật
 	/**
 	 * @param args
 	 */

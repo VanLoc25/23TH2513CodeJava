@@ -6,7 +6,7 @@ import java.util.Scanner;
  * 
  */
 public class Bai2 {
-
+//Tính chu vi và diện tích hình chữ nhật
 	/**
 	 * @param args
 	 */
