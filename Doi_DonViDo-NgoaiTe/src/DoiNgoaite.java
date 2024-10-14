@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class DoiNgoaite {
 
 	/**
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
